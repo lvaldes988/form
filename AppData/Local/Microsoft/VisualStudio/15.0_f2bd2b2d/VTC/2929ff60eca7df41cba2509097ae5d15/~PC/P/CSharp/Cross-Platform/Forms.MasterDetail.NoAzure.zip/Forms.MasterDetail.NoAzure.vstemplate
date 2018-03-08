@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Master Detail App (Xamarin.Forms Shared)</Name>
+    <Description>A multiproject template for building apps with, sharing code using a shared assets project. This project includes a simple item/detail UI with Azure support. Requires Visual Studio 2013 Update 2 or greater.</Description>
+    <Icon>FormsProject.ico</Icon>
+    <DefaultName>App</DefaultName>
+    <ProjectType>CSharp</ProjectType>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <TemplateID>Xamarin.Forms.MasterDetail.NoAzure.SAP</TemplateID>
+    <CreateInPlace>true</CreateInPlace>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink ProjectName="$safeprojectname$">
+        MasterDetail\MasterDetail.Shared.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Android">
+        MasterDetail.Droid\MasterDetail.Droid.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.iOS">
+        MasterDetail.iOS\MasterDetail.iOS.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.UWP">
+        MasterDetail.UWP\MasterDetail.UWP.vstemplate
+      </ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Xamarin.VisualStudio.TemplateWizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756</Assembly>
+    <FullClassName>Xamarin.VisualStudio.TemplateWizards.GettingStartedWizard</FullClassName>
+  </WizardExtension>
+	<WizardExtension>
+		<Assembly>Xamarin.VisualStudio.TemplateWizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756</Assembly>
+		<FullClassName>Xamarin.VisualStudio.TemplateWizards.FixSolutionPlatform</FullClassName>
+	</WizardExtension>
+  <WizardData>
+    <GettingStarted>
+      <StartPage>GS\XF\CS\App\GettingStarted.Xamarin</StartPage>
+    </GettingStarted>
+  </WizardData>
+</VSTemplate>
